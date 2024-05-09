@@ -6,7 +6,7 @@
 /*   By: msamilog <tahasamiloglu@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/13 18:19:21 by tbalci            #+#    #+#             */
-/*   Updated: 2024/04/24 20:18:26 by msamilog         ###   ########.fr       */
+/*   Updated: 2024/05/09 19:15:27 by msamilog         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,8 +86,24 @@ typedef struct s_globals
 t_globals	g_global;
 
 char	**ft_setenv(char **ev);
-void	minishell_loop(char *line,	t_global *mini);
 void	ft_init_lexer(t_global *mini, char *line);
 int		ft_quote(char *line);
+void	ft_first_node(t_global *mini, char *str);
+void	ft_last_node(t_global *mini, char *str);
+char	**ft_split_tok(char *str);
+void	ft_spt3(char ***tokens, int *i, int *tok_len, char **str);
+void	ft_spt4(char ***tokens, int *i, int *tok_len, char **str);
+char	*ft_strncpy(char *dest, char *src, int n);
+void	free_tokens(char **tokens);
+int		ft_check_error(t_global *mini);
+void	ft_deallocate_lexer(t_global *mini);
+void	ft_init_parser(t_global *mini);
+void	ft_skipinit(t_simple_cmds **new, int flag);
+void	ft_parser_lexpush_back(t_simple_cmds *temporary, char *str);
+int		ft_find_token(char *str);
+void	ft_delete_node(int index, t_global *mini);
+void	ft_init_matrix(t_global *mini);
+void	ft_deallocate_all(t_global *mini);
+int		ft_strcmp(char *s1, char *s2);
 
 #endif

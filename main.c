@@ -6,7 +6,7 @@
 /*   By: msamilog <tahasamiloglu@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 19:59:29 by msamilog          #+#    #+#             */
-/*   Updated: 2024/04/24 20:16:27 by msamilog         ###   ########.fr       */
+/*   Updated: 2024/05/09 19:39:36 by msamilog         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,14 @@ void	minishell_loop(char *line,	t_global *mini)
 			free(line);
 			continue ;
 		}
-		ft_expand(mini);
+		// ft_expand(mini);
 		ft_init_parser(mini);
-		ft_executer(mini);
+		printf("%s,\n", mini->p_head->str[0]);
+		printf("%s,\n", mini->p_head->str[1]);
+		printf("%s,\n", mini->p_head->str[2]);
+		printf("%s,\n", mini->p_head->str[3]);
+		printf("%s,\n", mini->p_head->str[4]);
+		// ft_executer(mini);
 		ft_deallocate_all(mini);
 		free(line);
 	}
