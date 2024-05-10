@@ -6,7 +6,7 @@
 /*   By: msamilog <tahasamiloglu@gmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 20:15:39 by msamilog          #+#    #+#             */
-/*   Updated: 2024/05/09 19:21:52 by msamilog         ###   ########.fr       */
+/*   Updated: 2024/05/10 16:57:39 by msamilog         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	ft_single_quote(char *line, int *i, int *flag)
 	{
 		if (line[*i] == '\'' || line[*i] == '|' || line[*i] == '>' \
 		|| line[*i] == '<')
-			flag = 0;
+			*flag = 0;
 	}
 }
 
